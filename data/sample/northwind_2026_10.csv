@@ -1,0 +1,33 @@
+month,region,category,channel,revenue_usd,units,orders,new_customers,returns_usd,cogs_usd,marketing_usd,notes
+2026-10,Northeast,Apparel,Online,99747,2118,1522,417,7205,47186,9411,
+2026-10,Northeast,Apparel,Store,123654,2632,1883,665,3511,59549,4978,
+2026-10,Northeast,Footwear,Online,62605,692,439,167,10798,34982,6036,
+2026-10,Northeast,Footwear,Store,93289,978,643,233,3035,53137,3756,
+2026-10,Northeast,Camping,Online,59479,448,288,100,4370,36370,9319,Cold-weather promo ran Oct 3-17
+2026-10,Northeast,Camping,Store,82937,623,416,116,2441,51666,3631,
+2026-10,Northeast,Accessories,Online,34226,1613,1166,295,2818,13472,3017,
+2026-10,Northeast,Accessories,Store,28302,1297,909,264,796,10841,1130,
+2026-10,South,Apparel,Online,89059,1809,1325,341,6413,42768,8203,
+2026-10,South,Apparel,Store,105391,2131,1442,437,3432,50221,4003,
+2026-10,South,Footwear,Online,57988,617,414,110,9086,31897,5634,New Ridgeline boot launched; customers report it runs small
+2026-10,South,Footwear,Store,84770,888,649,229,2466,47592,3092,
+2026-10,South,Camping,Online,32490,249,167,62,2366,20535,2978,
+2026-10,South,Camping,Store,59078,433,296,95,1727,37095,2583,
+2026-10,South,Accessories,Online,32020,1464,1090,362,2638,12578,2739,
+2026-10,South,Accessories,Store,25831,1220,753,213,851,9985,940,
+2026-10,Midwest,Apparel,Online,70154,1508,1158,392,5921,33032,5816,
+2026-10,Midwest,Apparel,Store,90374,1880,1399,465,2653,44079,3829,
+2026-10,Midwest,Footwear,Online,44595,478,310,99,8083,24491,3927,
+2026-10,Midwest,Footwear,Store,66728,724,547,160,1953,37879,2829,
+2026-10,Midwest,Camping,Online,36174,272,170,67,2713,22623,3160,
+2026-10,Midwest,Camping,Store,68424,514,323,110,1956,43014,2883,
+2026-10,Midwest,Accessories,Online,25982,1211,769,244,2255,9995,2265,
+2026-10,Midwest,Accessories,Store,21338,996,672,211,600,8339,782,
+2026-10,West,Apparel,Online,98378,2081,1243,421,7148,47012,9637,
+2026-10,West,Apparel,Store,99460,2100,1401,453,2921,46829,4053,Two mall locations reported lower foot traffic
+2026-10,West,Footwear,Online,65840,710,444,149,10158,36171,6025,
+2026-10,West,Footwear,Store,88421,995,668,221,2802,49652,3833,Two mall locations reported lower foot traffic
+2026-10,West,Camping,Online,51860,392,266,94,3818,31551,4649,
+2026-10,West,Camping,Store,80706,604,424,145,2370,50379,3212,Two mall locations reported lower foot traffic
+2026-10,West,Accessories,Online,37375,1681,1244,366,3168,14471,3300,
+2026-10,West,Accessories,Store,26054,1216,805,236,802,9964,993,Two mall locations reported lower foot traffic
