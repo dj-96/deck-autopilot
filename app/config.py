@@ -28,6 +28,9 @@ PRICES = {"input": 0.10, "cached_input": 0.01, "output": 0.50}
 
 # --- Limits ----------------------------------------------------------------
 MAX_TOKENS_PER_RUN = 120_000  # hard stop across every agent call in one run
+DAILY_BUDGET_USD = float(os.getenv("DAILY_BUDGET_USD", "1.00"))  # all runs in one day (~500 decks)
+MAX_FIX_ROUNDS = 2  # Storyliner retries after the fact-checker rejects a draft
+USAGE_LOG = OUTPUT_DIR / "usage_log.jsonl"
 MAX_OUTPUT_TOKENS_PER_CALL = 6_000
 REQUEST_TIMEOUT_S = 90
 MAX_UPLOAD_BYTES = 2_000_000  # per file

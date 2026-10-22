@@ -28,6 +28,19 @@ You need Python 3.11+ and one API key.
    ```
    You should see `answer via portkey` (or `via openai`) and a token count.
 
+5. **Run the pipeline from the command line** (the web app comes next)
+   ```bash
+   python scripts/run_pipeline.py
+   ```
+   Options: `--poisoned` (October file with a hidden prompt injection), `--tamper` (slips a made-up number into the first draft so you can watch the fact-checker reject it), `--prev a.csv --curr b.xlsx` (your own files). Each run saves `output/runs/<time>_pipeline.json` and appends its token usage to `output/usage_log.jsonl`.
+6. **Run the tests** (offline, no key needed): `python -m pytest -q`
+
+## How it works
+
+Guard (Python: size caps, prompt-injection quarantine) → Analyst agent (calls Python analysis tools; every number becomes a fact with an ID) → Storyliner agent (writes action titles and bullets citing fact IDs) → Fact-checker (Python: every number must match a cited fact; up to 2 fix rounds) → deck.
+
+Spending limits: 120K tokens per run, 10 Analyst turns / 30 tool calls, and a daily cap (`DAILY_BUDGET_USD`, default $1.00) checked before every run.
+
 ## Sample data
 
 `data/sample/` holds a fictional client, Northwind Outdoor Co. (32 rows per month: region x category x channel):
