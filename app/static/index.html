@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck Autopilot</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo"><span class="pink">Deck</span> Autopilot</div>
+    <div class="tagline">Refresh your recurring client deck. Every number fact-checked.</div>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="build" role="tab">Build deck</button>
+    <button class="tab" data-tab="safety" role="tab">Safety log <span class="tab-count" id="safety-count" hidden></span></button>
+    <button class="tab" data-tab="usage" role="tab">Usage</button>
+  </nav>
+  <div class="status" id="status">
+    <span class="pill" id="model-pill">gpt-6-luna</span>
+    <span class="pill" id="spend-pill">Today $0.00</span>
+  </div>
+</header>
+
+<main>
+  <!-- BUILD ---------------------------------------------------------------->
+  <section class="view" id="view-build">
+    <aside class="left">
+      <div class="card">
+        <div class="card-head"><span class="step-num">1</span> Data</div>
+        <label class="drop" id="drop-prev">
+          <input type="file" id="file-prev" accept=".csv,.xlsx">
+          <span class="drop-label">Last period</span>
+          <span class="drop-file" id="name-prev">Drop CSV or Excel</span>
+        </label>
+        <label class="drop" id="drop-curr">
+          <input type="file" id="file-curr" accept=".csv,.xlsx">
+          <span class="drop-label">This period</span>
+          <span class="drop-file" id="name-curr">Drop CSV or Excel</span>
+        </label>
+        <div class="or"><span>or</span></div>
+        <button class="btn ghost full" id="use-sample">Use sample client: Northwind, Sep vs Oct</button>
+        <div class="source" id="source-line">Source: sample client data</div>
+        <details class="test-modes">
+          <summary>Safety demos</summary>
+          <label class="check"><input type="checkbox" id="poisoned"> Hide a prompt injection in the October notes</label>
+          <label class="check"><input type="checkbox" id="tamper"> Plant a made-up number in the first draft</label>
+        </details>
+        <button class="btn primary full" id="run">Refresh my deck</button>
+        <div class="form-error" id="form-error" role="alert"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="step-num">2</span> Agents</div>
+        <ol class="steps" id="steps">
+          <li data-step="guard"><span class="dot"></span><div><b>Guard</b><small>Size caps, injection scan</small><em></em></div></li>
+          <li data-step="analyst"><span class="dot"></span><div><b>Analyst agent</b><small>Runs Python tools, builds the fact table</small><em></em></div></li>
+          <li data-step="storyliner"><span class="dot"></span><div><b>Storyliner agent</b><small>Writes action titles citing facts</small><em></em></div></li>
+          <li data-step="factchecker"><span class="dot"></span><div><b>Fact-checker</b><small>Every number must match a fact</small><em></em></div></li>
+          <li data-step="renderer"><span class="dot"></span><div><b>Renderer</b><small>Web preview and editable .pptx</small><em></em></div></li>
+        </ol>
+      </div>
+    </aside>
+
+    <section class="right">
+      <div class="empty" id="empty">
+        <h1>Last month's deck, refreshed in a minute.</h1>
+        <p>Upload last period's and this period's numbers. Two AI agents find what changed and write the slides; plain Python checks every number against your data before you see it.</p>
+        <div class="flow">
+          <div><b>1</b>Upload two periods</div><i></i>
+          <div><b>2</b>Agents analyze and write</div><i></i>
+          <div><b>3</b>Every number verified</div><i></i>
+          <div><b>4</b>Download .pptx</div>
+        </div>
+        <p class="hint">No data handy? Click <b>Use sample client</b>, then <b>Refresh my deck</b>.</p>
+      </div>
+
+      <div class="running" id="running" hidden>
+        <div class="spinner"></div>
+        <div><b id="running-title">Building your deck…</b><small id="running-detail">Starting</small></div>
+      </div>
+
+      <div class="error-box" id="error-box" hidden></div>
+
+      <div id="result" hidden>
+        <div class="badges" id="badges"></div>
+        <div class="viewer">
+          <button class="nav" id="prev-slide" aria-label="Previous slide">‹</button>
+          <div class="slide-wrap"><div class="slide" id="slide"></div></div>
+          <button class="nav" id="next-slide" aria-label="Next slide">›</button>
+        </div>
+        <div class="viewer-foot">
+          <div class="dots" id="dots"></div>
+          <div class="slide-count" id="slide-count"></div>
+        </div>
+        <div class="notes" id="notes"></div>
+        <div class="actions">
+          <a class="btn primary" id="download" href="#"><span>↓</span> Download .pptx</a>
+          <button class="btn ghost" id="show-changes"><span>What changed (<span id="n-findings">0</span>)</span></button>
+        </div>
+        <div class="trace-panel" id="trace-panel" hidden></div>
+        <div class="changes" id="changes" hidden></div>
+      </div>
+    </section>
+  </section>
+
+  <!-- SAFETY --------------------------------------------------------------->
+  <section class="view" id="view-safety" hidden>
+    <div class="grid4" id="safety-cards"></div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-head">Defense log, latest run</div>
+        <ul class="events" id="events"><li class="muted">Run a deck to see the defenses at work.</li></ul>
+      </div>
+      <div class="card">
+        <div class="card-head">Fact-check rounds</div>
+        <div id="rounds"><p class="muted">No run yet.</p></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-head">Always-on limits</div>
+      <ul class="limits" id="limits"></ul>
+    </div>
+  </section>
+
+  <!-- USAGE ---------------------------------------------------------------->
+  <section class="view" id="view-usage" hidden>
+    <div class="card">
+      <div class="card-head">Today's spend</div>
+      <div class="budget"><div class="budget-bar"><span id="budget-fill"></span></div><div id="budget-text"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-head">Latest run, by agent</div>
+      <table class="table" id="agent-table"><tbody><tr><td class="muted">No run yet.</td></tr></tbody></table>
+    </div>
+    <div class="card">
+      <div class="card-head">Run history</div>
+      <table class="table" id="history-table"><tbody><tr><td class="muted">No runs logged yet.</td></tr></tbody></table>
+    </div>
+  </section>
+</main>
+
+<footer class="meter" id="meter">
+  <div><small>Input tokens</small><b id="m-in">0</b></div>
+  <div><small>Cached input</small><b id="m-cached">0</b></div>
+  <div><small>Output tokens</small><b id="m-out">0</b></div>
+  <div><small>Model calls</small><b id="m-calls">0</b></div>
+  <div><small>Run cost</small><b class="pink" id="m-cost">$0.0000</b></div>
+  <div><small>Time</small><b id="m-time">0s</b></div>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
