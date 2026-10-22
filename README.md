@@ -1,5 +1,7 @@
 # Deck Autopilot
 
+**Repo:** https://github.com/dj-96/deck-autopilot · **Author:** Jun Kim (Yale SOM, MGT 409)
+
 Upload last period's and this period's business data, and get back a refreshed consulting deck: action titles, charts, and a "what changed" list. Every number on every slide is checked against the data before you see it. Download it as an editable PowerPoint.
 
 ## Run it locally (about 3 minutes)
@@ -8,7 +10,7 @@ You need Python 3.11+ and one API key.
 
 1. **Get the code**
    ```bash
-   git clone <repo-url> deck-autopilot
+   git clone https://github.com/dj-96/deck-autopilot.git
    cd deck-autopilot
    ```
 2. **Add your key.** Put a `.env` file in this folder **or in the folder above it** (see `.env.example`). The app needs `PORTKEY_API_KEY` or `OPENAI_API_KEY`. It tries Portkey first and switches to OpenAI automatically if Portkey is missing or out of budget.
