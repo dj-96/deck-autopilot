@@ -358,5 +358,28 @@ async function loadUsage() {
   }
 }
 
+// ---------- replay a saved run: /?replay=<job id>&tab=safety&slide=3&open=changes|facts ----------
+async function replayFromURL() {
+  const q = new URLSearchParams(location.search), id = q.get("replay");
+  if (!id) return;
+  const res = await fetch(`/api/replay/${encodeURIComponent(id)}`);
+  if (!res.ok) { $("error-box").hidden = false; $("error-box").textContent = "Saved run not found."; return; }
+  const job = await res.json();
+  state.result = job.result;
+  $("empty").hidden = true;
+  updateSteps(job); updateMeter(job.usage, job.elapsed_s);
+  renderResult(job.result); renderSafety(job.result);
+  $("download").removeAttribute("href");
+  if (q.get("demo")) {  // tick the boxes that produced this run, for screenshots
+    document.querySelector(".test-modes").open = true;
+    q.get("demo").split(",").forEach((id) => { const el = $(id); if (el) el.checked = true; });
+  }
+  if (q.get("slide")) { state.slide = +q.get("slide"); renderSlide(); }
+  if (q.get("open") === "changes") $("changes").hidden = false;
+  if (q.get("open") === "facts") { const li = document.querySelectorAll("#slide li")[+(q.get("bullet") || 0)]; if (li) showFacts(li); }
+  if (q.get("tab")) document.querySelector(`.tab[data-tab="${q.get("tab")}"]`)?.click();
+}
+
 setSource("sample");
 loadStatus();
+replayFromURL();

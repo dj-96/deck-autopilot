@@ -1,0 +1,1166 @@
+{
+  "reference_facts": 2565,
+  "runs": [
+    {
+      "i": 0,
+      "elapsed_s": 29.0,
+      "gateway": "openai",
+      "input_tokens": 2730,
+      "cached_tokens": 0,
+      "output_tokens": 3399,
+      "cost_usd": 0.001972,
+      "numbers": 56,
+      "verified": 54,
+      "unverifiable": 2,
+      "violations": [
+        {
+          "where": "slide 3 bullet 3",
+          "text": "Revenue less COGS and marketing increased from $11,826 to $13,790.",
+          "number": "$11,826",
+          "reason": "no fact in the table has this value"
+        },
+        {
+          "where": "slide 3 bullet 3",
+          "text": "Revenue less COGS and marketing increased from $11,826 to $13,790.",
+          "number": "$13,790",
+          "reason": "no fact in the table has this value"
+        }
+      ],
+      "deck": {
+        "deck_title": "October Business Review: Growth with Targeted Execution Risks",
+        "subtitle": "Monthly business review: September vs October 2026",
+        "executive_summary": [
+          {
+            "text": "Revenue rose to $2,042,729 in October, up $64,110 or 3.2% month over month.",
+            "fact_ids": [
+              "F2",
+              "F3",
+              "F4"
+            ]
+          },
+          {
+            "text": "Northeast revenue increased $41,925, while West revenue declined $18,402.",
+            "fact_ids": [
+              "F7",
+              "F15"
+            ]
+          },
+          {
+            "text": "Online footwear returns more than doubled to $38,125 as revenue increased only to $231,028.",
+            "fact_ids": [
+              "F1342",
+              "F158"
+            ]
+          },
+          {
+            "text": "Northeast online Camping grew revenue to $59,479 during a cold-weather promotion, while marketing spend rose to $9,319.",
+            "fact_ids": [
+              "F174",
+              "F1974"
+            ]
+          }
+        ],
+        "slides": [
+          {
+            "title": "October revenue grew 3.2% to $2,042,729",
+            "title_fact_ids": [
+              "F4",
+              "F2"
+            ],
+            "bullets": [
+              {
+                "text": "Revenue increased $64,110 from September\u2019s $1,978,619.",
+                "fact_ids": [
+                  "F3",
+                  "F1"
+                ]
+              },
+              {
+                "text": "Apparel added $29,124 to reach $776,217, the largest category increase.",
+                "fact_ids": [
+                  "F23",
+                  "F22"
+                ]
+              },
+              {
+                "text": "Camping added $22,324 to reach $471,148; Footwear grew $3,674 to $564,236.",
+                "fact_ids": [
+                  "F27",
+                  "F26",
+                  "F35",
+                  "F34"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "Growth was broad across categories, with Apparel and Camping contributing most of the increase. Footwear was nearly flat on revenue despite a material increase in online returns."
+          },
+          {
+            "title": "Northeast added $41,925, more than offsetting West\u2019s decline",
+            "title_fact_ids": [
+              "F7"
+            ],
+            "bullets": [
+              {
+                "text": "Northeast revenue rose 7.7% to $584,239, the largest regional gain.",
+                "fact_ids": [
+                  "F8",
+                  "F6"
+                ]
+              },
+              {
+                "text": "South increased 5.2% to $486,627 and Midwest increased 4.0% to $423,769.",
+                "fact_ids": [
+                  "F12",
+                  "F10",
+                  "F20",
+                  "F18"
+                ]
+              },
+              {
+                "text": "West revenue fell 3.2% to $548,094, a decline of $18,402.",
+                "fact_ids": [
+                  "F4",
+                  "F14",
+                  "F15"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The Northeast was the primary growth engine. West was the only region to decline, warranting a closer look at its store-channel performance."
+          },
+          {
+            "title": "Northeast Camping promotion lifted sales, but spend rose faster",
+            "title_fact_ids": [],
+            "bullets": [
+              {
+                "text": "Northeast online Camping revenue grew from $41,441 to $59,479, an increase of 43.5%.",
+                "fact_ids": [
+                  "F173",
+                  "F174",
+                  "F176"
+                ]
+              },
+              {
+                "text": "Marketing spend rose from $3,692 to $9,319, an increase of 152.4%.",
+                "fact_ids": [
+                  "F1973",
+                  "F1974",
+                  "F1976"
+                ]
+              },
+              {
+                "text": "Revenue less COGS and marketing increased from $11,826 to $13,790.",
+                "fact_ids": []
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The reported cold-weather promotion ran October 3\u201317 and coincided with the sales lift. Although the simple revenue-minus-COGS-and-marketing amount increased, spend grew much faster than revenue; review campaign efficiency before repeating."
+          },
+          {
+            "title": "Online footwear returns rose to $38,125 as revenue barely grew",
+            "title_fact_ids": [
+              "F1342"
+            ],
+            "bullets": [
+              {
+                "text": "Online footwear returns increased from $17,829 to $38,125, up 114%.",
+                "fact_ids": [
+                  "F1341",
+                  "F1342",
+                  "F1344"
+                ]
+              },
+              {
+                "text": "Online footwear revenue moved from $225,102 to $231,028, up 2.6%.",
+                "fact_ids": [
+                  "F157",
+                  "F158",
+                  "F160"
+                ]
+              },
+              {
+                "text": "Returns equaled 16.5% of online footwear revenue in October, versus 7.9% in September.",
+                "fact_ids": [
+                  "F144",
+                  "F1272"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The South noted that the newly launched Ridgeline boot runs small, which may be contributing to returns there. Returns increased across all four regions, so investigate broader fit, product, or fulfillment issues as well."
+          },
+          {
+            "title": "West store revenue fell 10.8% amid reported mall traffic weakness",
+            "title_fact_ids": [
+              "F112"
+            ],
+            "bullets": [
+              {
+                "text": "West store revenue declined $35,661, from $330,302 to $294,641.",
+                "fact_ids": [
+                  "F111",
+                  "F109",
+                  "F110"
+                ]
+              },
+              {
+                "text": "West online revenue increased $17,259, from $236,194 to $253,453, partially offsetting the store decline.",
+                "fact_ids": [
+                  "F119",
+                  "F117",
+                  "F118"
+                ]
+              },
+              {
+                "text": "West total revenue decreased $18,402, from $566,496 to $548,094.",
+                "fact_ids": [
+                  "F15",
+                  "F13",
+                  "F14"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "Notes across West store categories cite lower foot traffic at two mall locations. Separate the impact of those locations from broader store trends and assess near-term traffic recovery actions."
+          }
+        ]
+      }
+    },
+    {
+      "i": 1,
+      "elapsed_s": 32.9,
+      "gateway": "openai",
+      "input_tokens": 2730,
+      "cached_tokens": 2727,
+      "output_tokens": 3842,
+      "cost_usd": 0.001949,
+      "numbers": 51,
+      "verified": 50,
+      "unverifiable": 1,
+      "violations": [
+        {
+          "where": "slide 2 title",
+          "text": "Apparel and Camping added $51,448 in revenue, leading October\u2019s category growth.",
+          "number": "$51,448",
+          "reason": "no fact in the table has this value"
+        }
+      ],
+      "deck": {
+        "deck_title": "October Business Review: Growth, Returns, and Regional Performance",
+        "subtitle": "Monthly business review: October 2026 vs September 2026",
+        "executive_summary": [
+          {
+            "text": "Revenue increased by $64,110 to $2,042,729, with online sales contributing $62,418 of the gain.",
+            "fact_ids": [
+              "F3",
+              "F2",
+              "F39"
+            ]
+          },
+          {
+            "text": "Apparel grew by $29,124 and Camping by $22,324, making them the largest category contributors to revenue growth.",
+            "fact_ids": [
+              "F23",
+              "F27"
+            ]
+          },
+          {
+            "text": "Footwear returns rose by $20,240 to $48,381 while Footwear revenue increased by only $3,674.",
+            "fact_ids": [
+              "F1223",
+              "F1222",
+              "F35"
+            ]
+          },
+          {
+            "text": "The West was the only region to decline, falling by $18,402 as store revenue dropped by $35,661.",
+            "fact_ids": [
+              "F15",
+              "F111"
+            ]
+          }
+        ],
+        "slides": [
+          {
+            "title": "October revenue grew $64,110 to $2,042,729, almost entirely from online sales.",
+            "title_fact_ids": [
+              "F3",
+              "F2"
+            ],
+            "bullets": [
+              {
+                "text": "Total revenue increased from $1,978,619 in September to $2,042,729 in October.",
+                "fact_ids": [
+                  "F1",
+                  "F2"
+                ]
+              },
+              {
+                "text": "Online revenue rose by $62,418, from $835,554 to $897,972.",
+                "fact_ids": [
+                  "F39",
+                  "F37",
+                  "F38"
+                ]
+              },
+              {
+                "text": "Store revenue edged up by $1,692, from $1,143,065 to $1,144,757.",
+                "fact_ids": [
+                  "F43",
+                  "F41",
+                  "F42"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "Online accounted for nearly all of the month-over-month revenue increase. Store sales were effectively flat overall, masking a sharp decline in the West."
+          },
+          {
+            "title": "Apparel and Camping added $51,448 in revenue, leading October\u2019s category growth.",
+            "title_fact_ids": [],
+            "bullets": [
+              {
+                "text": "Apparel revenue increased by $29,124, from $747,093 to $776,217.",
+                "fact_ids": [
+                  "F23",
+                  "F21",
+                  "F22"
+                ]
+              },
+              {
+                "text": "Camping revenue increased by $22,324, from $448,824 to $471,148.",
+                "fact_ids": [
+                  "F27",
+                  "F25",
+                  "F26"
+                ]
+              },
+              {
+                "text": "Accessories grew by $8,988, while Footwear grew by $3,674.",
+                "fact_ids": [
+                  "F31",
+                  "F35"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "Apparel and Camping together contributed most of the overall revenue increase. Northeast online Camping was a notable contributor, supported by a cold-weather promotion."
+          },
+          {
+            "title": "Footwear returns climbed $20,240 to $48,381; investigate sizing before scaling.",
+            "title_fact_ids": [
+              "F1223",
+              "F1222"
+            ],
+            "bullets": [
+              {
+                "text": "Footwear returns increased from $28,141 in September to $48,381 in October.",
+                "fact_ids": [
+                  "F1221",
+                  "F1222"
+                ]
+              },
+              {
+                "text": "Footwear revenue rose by only $3,674, from $560,562 to $564,236.",
+                "fact_ids": [
+                  "F35",
+                  "F33",
+                  "F34"
+                ]
+              },
+              {
+                "text": "South online Footwear returns increased from $4,433 to $9,086.",
+                "fact_ids": [
+                  "F1381",
+                  "F1382"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The South Footwear note says customers report that the new Ridgeline boot runs small, which warrants a sizing review. Returns also rose across other regions, so validate whether the issue extends beyond that launch."
+          },
+          {
+            "title": "The West lost $18,402 in revenue as store sales fell $35,661.",
+            "title_fact_ids": [
+              "F15",
+              "F111"
+            ],
+            "bullets": [
+              {
+                "text": "West revenue declined from $566,496 to $548,094, the only regional decline.",
+                "fact_ids": [
+                  "F13",
+                  "F14"
+                ]
+              },
+              {
+                "text": "West store revenue dropped from $330,302 to $294,641.",
+                "fact_ids": [
+                  "F109",
+                  "F110"
+                ]
+              },
+              {
+                "text": "West online revenue increased from $236,194 to $253,453.",
+                "fact_ids": [
+                  "F117",
+                  "F118"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The data notes lower foot traffic at two West mall locations, consistent with the store decline. Online growth partially offset the drop, but did not make up for it."
+          },
+          {
+            "title": "Northeast online Camping gained $18,038 during the cold-weather promotion.",
+            "title_fact_ids": [
+              "F175"
+            ],
+            "bullets": [
+              {
+                "text": "Northeast online Camping revenue rose from $41,441 to $59,479.",
+                "fact_ids": [
+                  "F173",
+                  "F174"
+                ]
+              },
+              {
+                "text": "Marketing spend for the segment increased from $3,692 to $9,319.",
+                "fact_ids": [
+                  "F1973",
+                  "F1974"
+                ]
+              },
+              {
+                "text": "The promotion ran from October 3 to October 17; revenue growth should be assessed alongside margin and returns.",
+                "fact_ids": []
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The promotion coincided with a substantial increase in Northeast online Camping revenue, but marketing spend also rose materially. Review contribution margin and post-promotion performance before extending the offer."
+          }
+        ]
+      }
+    },
+    {
+      "i": 2,
+      "elapsed_s": 36.3,
+      "gateway": "openai",
+      "input_tokens": 2730,
+      "cached_tokens": 2727,
+      "output_tokens": 4749,
+      "cost_usd": 0.002402,
+      "numbers": 61,
+      "verified": 59,
+      "unverifiable": 2,
+      "violations": [
+        {
+          "where": "executive summary bullet 2",
+          "text": "Online revenue added $62,418, accounting for 97.4% of total growth; store revenue added $1,692.",
+          "number": "97.4%",
+          "reason": "no fact in the table has this value"
+        },
+        {
+          "where": "slide 1 bullet 3",
+          "text": "Online accounted for 97.4% of the net revenue increase.",
+          "number": "97.4%",
+          "reason": "no fact in the table has this value"
+        }
+      ],
+      "deck": {
+        "deck_title": "October Business Review: Growth, Channel Mix, and Returns",
+        "subtitle": "Monthly business review: September vs October 2026",
+        "executive_summary": [
+          {
+            "text": "Revenue rose to $2,042,729, up $64,110 (3.2%) month over month.",
+            "fact_ids": [
+              "F2",
+              "F3",
+              "F4"
+            ]
+          },
+          {
+            "text": "Online revenue added $62,418, accounting for 97.4% of total growth; store revenue added $1,692.",
+            "fact_ids": [
+              "F39",
+              "F43"
+            ]
+          },
+          {
+            "text": "Online camping sales increased $25,480, including an $18,038 increase in Northeast online sales.",
+            "fact_ids": [
+              "F143",
+              "F175"
+            ]
+          },
+          {
+            "text": "Online footwear returns climbed to $38,125 from $17,829, lifting the return rate from 7.9% to 16.5%.",
+            "fact_ids": [
+              "F1342",
+              "F1341",
+              "F1272",
+              "F144"
+            ]
+          },
+          {
+            "text": "West revenue fell $18,402 as store revenue declined $35,661 amid reports of lower foot traffic.",
+            "fact_ids": [
+              "F15",
+              "F111"
+            ]
+          }
+        ],
+        "slides": [
+          {
+            "title": "Revenue grew 3.2% to $2,042,729, with online supplying nearly all net growth.",
+            "title_fact_ids": [
+              "F4",
+              "F2"
+            ],
+            "bullets": [
+              {
+                "text": "Total revenue increased $64,110, from $1,978,619 to $2,042,729.",
+                "fact_ids": [
+                  "F3",
+                  "F1",
+                  "F2"
+                ]
+              },
+              {
+                "text": "Online sales rose $62,418 to $897,972, while store sales rose $1,692 to $1,144,757.",
+                "fact_ids": [
+                  "F39",
+                  "F38",
+                  "F43",
+                  "F42"
+                ]
+              },
+              {
+                "text": "Online accounted for 97.4% of the net revenue increase.",
+                "fact_ids": []
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "Growth was concentrated online; store revenue was nearly flat. Focus on sustaining online momentum while diagnosing what is limiting store growth."
+          },
+          {
+            "title": "Online camping added $25,480, led by an $18,038 Northeast surge.",
+            "title_fact_ids": [
+              "F143",
+              "F175"
+            ],
+            "bullets": [
+              {
+                "text": "Online camping revenue rose from $154,523 to $180,003, an increase of 16.5%.",
+                "fact_ids": [
+                  "F141",
+                  "F142",
+                  "F144"
+                ]
+              },
+              {
+                "text": "Northeast online camping revenue increased from $41,441 to $59,479.",
+                "fact_ids": [
+                  "F173",
+                  "F174"
+                ]
+              },
+              {
+                "text": "Northeast online camping marketing increased from $3,692 to $9,319; the October notes cite a cold-weather promotion running Oct 3\u201317.",
+                "fact_ids": [
+                  "F1973",
+                  "F1974"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The promotion coincided with a strong Northeast online camping lift, but marketing spend also rose substantially. Assess incremental profitability before repeating the spend level."
+          },
+          {
+            "title": "Online footwear returns more than doubled to $38,125, putting fit issues in focus.",
+            "title_fact_ids": [
+              "F1342"
+            ],
+            "bullets": [
+              {
+                "text": "Online footwear returns rose from $17,829 to $38,125, while revenue increased from $225,102 to $231,028.",
+                "fact_ids": [
+                  "F1341",
+                  "F1342",
+                  "F157",
+                  "F158"
+                ]
+              },
+              {
+                "text": "Returns as a share of online footwear revenue climbed from 7.9% to 16.5%.",
+                "fact_ids": [
+                  "F1272",
+                  "F144"
+                ]
+              },
+              {
+                "text": "South online footwear returns increased from $4,433 to $9,086; October notes say customers report the new Ridgeline boot runs small.",
+                "fact_ids": [
+                  "F1381",
+                  "F1382"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The South note points to a potential fit issue with the Ridgeline launch, while returns increased across all four regions. Review return reasons and size guidance by product and region."
+          },
+          {
+            "title": "Northeast led regions with $41,925 growth, while West declined $18,402.",
+            "title_fact_ids": [
+              "F7",
+              "F15"
+            ],
+            "bullets": [
+              {
+                "text": "Northeast revenue rose from $542,314 to $584,239, an increase of 7.7%.",
+                "fact_ids": [
+                  "F5",
+                  "F6",
+                  "F8"
+                ]
+              },
+              {
+                "text": "South revenue increased $24,206 to $486,627, and Midwest revenue increased $16,381 to $423,769.",
+                "fact_ids": [
+                  "F11",
+                  "F10",
+                  "F19",
+                  "F18"
+                ]
+              },
+              {
+                "text": "West revenue fell from $566,496 to $548,094, a decline of 3.2%.",
+                "fact_ids": [
+                  "F13",
+                  "F14",
+                  "F4"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "Northeast contributed the largest regional increase, while West was the only region to contract. Investigate which West store pressures are addressable and where Northeast momentum can be replicated."
+          },
+          {
+            "title": "West store sales fell $35,661 as online gains only partly offset reported mall traffic softness.",
+            "title_fact_ids": [
+              "F111"
+            ],
+            "bullets": [
+              {
+                "text": "West store revenue declined from $330,302 to $294,641, a decrease of 10.8%.",
+                "fact_ids": [
+                  "F109",
+                  "F110",
+                  "F112"
+                ]
+              },
+              {
+                "text": "West online revenue increased $17,259, from $236,194 to $253,453.",
+                "fact_ids": [
+                  "F119",
+                  "F117",
+                  "F118"
+                ]
+              },
+              {
+                "text": "October notes cite lower foot traffic at two West mall locations.",
+                "fact_ids": []
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "Online growth offset less than half of the West store decline. Separate the impact of reported mall traffic softness from category-level performance before adjusting store plans."
+          }
+        ]
+      }
+    },
+    {
+      "i": 3,
+      "elapsed_s": 27.8,
+      "gateway": "openai",
+      "input_tokens": 2730,
+      "cached_tokens": 2727,
+      "output_tokens": 3403,
+      "cost_usd": 0.001729,
+      "numbers": 55,
+      "verified": 54,
+      "unverifiable": 1,
+      "violations": [
+        {
+          "where": "slide 1 bullet 3",
+          "text": "Online share of revenue advanced from 42.2% to 44.0%.",
+          "number": "42.2%",
+          "reason": "no fact in the table has this value"
+        }
+      ],
+      "deck": {
+        "deck_title": "October Business Review: Growth, Channel Mix and Returns",
+        "subtitle": "Monthly business review: October 2026 vs September 2026",
+        "executive_summary": [
+          {
+            "text": "Revenue grew 3.2% to $2,042,729, with online sales accounting for nearly all of the increase.",
+            "fact_ids": [
+              "F4",
+              "F2"
+            ]
+          },
+          {
+            "text": "Northeast led regional growth, up $41,925, while West revenue declined $18,402.",
+            "fact_ids": [
+              "F7",
+              "F15"
+            ]
+          },
+          {
+            "text": "Camping revenue rose $22,324, including a $18,038 increase in Northeast online sales during the cold-weather promotion.",
+            "fact_ids": [
+              "F27",
+              "F175"
+            ]
+          },
+          {
+            "text": "Footwear returns rose 72% to $48,381, while footwear revenue increased only $3,674.",
+            "fact_ids": [
+              "F1224",
+              "F1222",
+              "F35"
+            ]
+          }
+        ],
+        "slides": [
+          {
+            "title": "Revenue grew 3.2% to $2,042,729, led by online sales",
+            "title_fact_ids": [
+              "F4",
+              "F2"
+            ],
+            "bullets": [
+              {
+                "text": "Total revenue increased $64,110 from $1,978,619 in September.",
+                "fact_ids": [
+                  "F3",
+                  "F1"
+                ]
+              },
+              {
+                "text": "Online revenue rose $62,418 to $897,972; store revenue increased just $1,692 to $1,144,757.",
+                "fact_ids": [
+                  "F39",
+                  "F38",
+                  "F43",
+                  "F42"
+                ]
+              },
+              {
+                "text": "Online share of revenue advanced from 42.2% to 44.0%.",
+                "fact_ids": [
+                  "F2458"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "Growth was overwhelmingly digital: online sales generated almost all of the month-over-month revenue increase. Continue to build online momentum while investigating why store sales were nearly flat."
+          },
+          {
+            "title": "Northeast added $41,925 in revenue, while West fell $18,402",
+            "title_fact_ids": [
+              "F7",
+              "F15"
+            ],
+            "bullets": [
+              {
+                "text": "Northeast revenue rose 7.7% to $584,239, the largest increase among regions.",
+                "fact_ids": [
+                  "F8",
+                  "F6"
+                ]
+              },
+              {
+                "text": "South grew 5.2% to $486,627 and Midwest grew 4.0% to $423,769.",
+                "fact_ids": [
+                  "F12",
+                  "F10",
+                  "F20",
+                  "F18"
+                ]
+              },
+              {
+                "text": "West revenue declined 3.2% to $548,094 despite online growth of $17,259.",
+                "fact_ids": [
+                  "F4",
+                  "F14",
+                  "F119"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The West's decline was concentrated in stores: store revenue fell from $330,302 to $294,641. Lower foot traffic was reported at two mall locations, consistent with the store weakness."
+          },
+          {
+            "title": "Camping grew $22,324, led by Northeast online sales during the promotion",
+            "title_fact_ids": [
+              "F27"
+            ],
+            "bullets": [
+              {
+                "text": "Camping revenue increased 5.0% to $471,148, the largest category dollar gain.",
+                "fact_ids": [
+                  "F28",
+                  "F26"
+                ]
+              },
+              {
+                "text": "Northeast online camping revenue rose from $41,441 to $59,479, while units increased from 297 to 448.",
+                "fact_ids": [
+                  "F173",
+                  "F174",
+                  "F493",
+                  "F494"
+                ]
+              },
+              {
+                "text": "Northeast online camping marketing spend increased from $3,692 to $9,319 during the October 3\u201317 cold-weather promotion.",
+                "fact_ids": [
+                  "F1973",
+                  "F1974"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The promotion coincided with a clear lift in Northeast online camping sales and units. Review the campaign's margin and post-promotion demand before extending the spend level."
+          },
+          {
+            "title": "Footwear returns surged 72% to $48,381 as revenue barely grew",
+            "title_fact_ids": [
+              "F1224",
+              "F1222"
+            ],
+            "bullets": [
+              {
+                "text": "Footwear revenue increased just 0.7%, from $560,562 to $564,236, while returns rose from $28,141 to $48,381.",
+                "fact_ids": [
+                  "F36",
+                  "F33",
+                  "F34",
+                  "F1221",
+                  "F1222"
+                ]
+              },
+              {
+                "text": "South online footwear returns more than doubled, rising from $4,433 to $9,086.",
+                "fact_ids": [
+                  "F1381",
+                  "F1382"
+                ]
+              },
+              {
+                "text": "The South online Ridgeline boot launched this month, and customers reported that it runs small.",
+                "fact_ids": []
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The reported sizing feedback is a plausible contributor to the South online increase, but footwear returns rose across all four regions. Check product-level return reasons and size guidance before deciding whether the issue is isolated to the new boot."
+          },
+          {
+            "title": "West store revenue fell $35,661 despite online growth",
+            "title_fact_ids": [
+              "F111"
+            ],
+            "bullets": [
+              {
+                "text": "West store revenue declined 10.8%, from $330,302 to $294,641.",
+                "fact_ids": [
+                  "F112",
+                  "F109",
+                  "F110"
+                ]
+              },
+              {
+                "text": "West online revenue increased 7.3%, from $236,194 to $253,453, but did not offset the store decline.",
+                "fact_ids": [
+                  "F120",
+                  "F117",
+                  "F118"
+                ]
+              },
+              {
+                "text": "Notes cited lower foot traffic at two West mall locations across apparel, footwear, camping and accessories.",
+                "fact_ids": []
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The West's online improvement was not enough to counter the steep store drop. Validate traffic and conversion by location, then prioritize recovery actions at the two affected malls."
+          }
+        ]
+      }
+    },
+    {
+      "i": 4,
+      "elapsed_s": 30.0,
+      "gateway": "openai",
+      "input_tokens": 2730,
+      "cached_tokens": 2727,
+      "output_tokens": 3605,
+      "cost_usd": 0.00183,
+      "numbers": 43,
+      "verified": 40,
+      "unverifiable": 3,
+      "violations": [
+        {
+          "where": "executive summary bullet 3",
+          "text": "Apparel and camping together contributed $51,448 of the net revenue increase.",
+          "number": "$51,448",
+          "reason": "no fact in the table has this value"
+        },
+        {
+          "where": "slide 3 title",
+          "text": "Apparel and camping drove $51,448 of revenue growth",
+          "number": "$51,448",
+          "reason": "no fact in the table has this value"
+        },
+        {
+          "where": "slide 3 bullet 3",
+          "text": "Accessories added $18,988, while footwear added $3,674.",
+          "number": "$18,988",
+          "reason": "no fact in the table has this value"
+        }
+      ],
+      "deck": {
+        "deck_title": "October 2026 Business Review",
+        "subtitle": "Monthly business review: September vs October 2026",
+        "executive_summary": [
+          {
+            "text": "Revenue reached $2,042,729, up $64,110 (3.2%) from September.",
+            "fact_ids": [
+              "F2",
+              "F3",
+              "F4"
+            ]
+          },
+          {
+            "text": "Online revenue grew $62,418, while store revenue increased just $1,692.",
+            "fact_ids": [
+              "F39",
+              "F43"
+            ]
+          },
+          {
+            "text": "Apparel and camping together contributed $51,448 of the net revenue increase.",
+            "fact_ids": []
+          },
+          {
+            "text": "Online footwear returns more than doubled to $38,125, with South customers reporting that the new Ridgeline boot runs small.",
+            "fact_ids": [
+              "F1342"
+            ]
+          }
+        ],
+        "slides": [
+          {
+            "title": "October revenue grew $64,110 to $2,042,729",
+            "title_fact_ids": [
+              "F3",
+              "F2"
+            ],
+            "bullets": [
+              {
+                "text": "Revenue rose 3.2% from September\u2019s $1,978,619.",
+                "fact_ids": [
+                  "F4",
+                  "F1"
+                ]
+              },
+              {
+                "text": "Online growth accounted for nearly all of the net increase, while store revenue was almost unchanged.",
+                "fact_ids": []
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The top line improved, but growth was concentrated in online rather than stores. Focus the review on what is driving digital momentum and how to address store softness."
+          },
+          {
+            "title": "Online added $62,418, while store revenue was nearly flat",
+            "title_fact_ids": [
+              "F39"
+            ],
+            "bullets": [
+              {
+                "text": "Online revenue increased 7.5% to $897,972 from $835,554.",
+                "fact_ids": [
+                  "F40",
+                  "F38",
+                  "F37"
+                ]
+              },
+              {
+                "text": "Store revenue rose just 0.1% to $1,144,757 from $1,143,065.",
+                "fact_ids": [
+                  "F44",
+                  "F42",
+                  "F41"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The channel mix shifted toward online, which drove almost all of this month\u2019s growth. Assess whether digital demand can be sustained while addressing the lack of store growth."
+          },
+          {
+            "title": "Apparel and camping drove $51,448 of revenue growth",
+            "title_fact_ids": [],
+            "bullets": [
+              {
+                "text": "Apparel revenue increased $29,124 to $776,217.",
+                "fact_ids": [
+                  "F23",
+                  "F22"
+                ]
+              },
+              {
+                "text": "Camping revenue increased $22,324 to $471,148.",
+                "fact_ids": [
+                  "F27",
+                  "F26"
+                ]
+              },
+              {
+                "text": "Accessories added $18,988, while footwear added $3,674.",
+                "fact_ids": [
+                  "F35"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "Apparel was the largest category contributor, with camping also making a substantial gain. The camping increase coincided with a Northeast online promotion, discussed separately."
+          },
+          {
+            "title": "Online footwear returns more than doubled to $38,125",
+            "title_fact_ids": [
+              "F1342"
+            ],
+            "bullets": [
+              {
+                "text": "Online footwear returns increased from $17,829 in September to $38,125 in October.",
+                "fact_ids": [
+                  "F1341",
+                  "F1342"
+                ]
+              },
+              {
+                "text": "Online footwear revenue grew only 2.6%, from $225,102 to $231,028.",
+                "fact_ids": [
+                  "F160",
+                  "F157",
+                  "F158"
+                ]
+              },
+              {
+                "text": "October online footwear returns were $10,798 in the Northeast and $9,086 in the South.",
+                "fact_ids": [
+                  "F1374",
+                  "F1382"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The South note flags that customers say the newly launched Ridgeline boot runs small, making fit a clear issue to investigate. Returns also rose sharply in the Northeast, so check whether the issue extends beyond the new boot."
+          },
+          {
+            "title": "Northeast online camping sales rose 44%, but promo spend rose faster",
+            "title_fact_ids": [
+              "F176"
+            ],
+            "bullets": [
+              {
+                "text": "Northeast online camping revenue grew to $59,479 from $41,441.",
+                "fact_ids": [
+                  "F174",
+                  "F173"
+                ]
+              },
+              {
+                "text": "Marketing spend for that business rose to $9,319 from $3,692.",
+                "fact_ids": [
+                  "F1974",
+                  "F1973"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "The cold-weather promotion ran October 3\u201317 and coincided with stronger online camping sales. Spend grew faster than revenue, so evaluate the promotion\u2019s incremental return before repeating it."
+          },
+          {
+            "title": "West store revenue fell $35,661 amid reported mall traffic declines",
+            "title_fact_ids": [
+              "F111"
+            ],
+            "bullets": [
+              {
+                "text": "West store revenue declined to $294,641 from $330,302.",
+                "fact_ids": [
+                  "F110",
+                  "F109"
+                ]
+              },
+              {
+                "text": "West online revenue increased $17,259 to $253,453, partly offsetting the store decline.",
+                "fact_ids": [
+                  "F119",
+                  "F118"
+                ]
+              }
+            ],
+            "chart": null,
+            "speaker_notes": "Notes on West store rows report lower foot traffic at two mall locations. The store decline exceeded the online gain, leaving total West revenue down $18,402 for the month."
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "numbers": 266,
+    "unverifiable": 9,
+    "decks_with_error": 5,
+    "runs": 5
+  },
+  "manual_review": {
+    "method": "Each unverifiable number recomputed by hand from the CSVs with pandas.",
+    "items": [
+      {
+        "number": "$51,448",
+        "count": 3,
+        "verdict": "correct",
+        "note": "Apparel + Camping revenue change (derived sum, not in reference table)"
+      },
+      {
+        "number": "97.4%",
+        "count": 2,
+        "verdict": "correct",
+        "note": "Online share of revenue growth: 62,418 / 64,110"
+      },
+      {
+        "number": "42.2%",
+        "count": 1,
+        "verdict": "correct",
+        "note": "Online share of September revenue"
+      },
+      {
+        "number": "$11,826 / $13,790",
+        "count": 2,
+        "verdict": "correct",
+        "note": "Revenue - COGS - marketing for Northeast/Camping/Online, Sep and Oct"
+      },
+      {
+        "number": "$18,988",
+        "count": 1,
+        "verdict": "WRONG",
+        "note": "Accessories revenue change is $8,988 (off by $10,000)"
+      }
+    ],
+    "summary": "266 numbers in 5 decks: 265 correct, 1 wrong (0.4%); 1 of 5 decks contained a wrong number. Nothing in the output marks which number is wrong."
+  }
+}

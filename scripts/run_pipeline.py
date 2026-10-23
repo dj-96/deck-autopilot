@@ -28,6 +28,7 @@ def main() -> None:
     ap.add_argument("--curr", type=Path, default=config.SAMPLE_DIR / "northwind_2026_10.csv")
     ap.add_argument("--poisoned", action="store_true")
     ap.add_argument("--tamper", action="store_true")
+    ap.add_argument("--pptx", type=Path, help="also save the deck as a .pptx here")
     args = ap.parse_args()
     if args.poisoned:
         args.curr = config.SAMPLE_DIR / "northwind_2026_10_poisoned.csv"
@@ -101,6 +102,11 @@ def main() -> None:
     }, indent=2, default=str), encoding="utf-8")
     print(f"   saved {out.relative_to(config.REPO_DIR)}; usage appended to "
           f"{config.USAGE_LOG.relative_to(config.REPO_DIR)}")
+    if args.pptx:
+        from app.render_pptx import render_pptx
+        args.pptx.parent.mkdir(parents=True, exist_ok=True)
+        args.pptx.write_bytes(render_pptx(r.deck, facts, r.check))
+        print(f"   deck saved to {args.pptx}")
 
 
 if __name__ == "__main__":

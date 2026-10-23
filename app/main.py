@@ -7,6 +7,7 @@ agent trace, then shows the checked deck and offers the .pptx download.
 """
 import json
 import os
+import re
 import threading
 import time
 import uuid
@@ -169,6 +170,20 @@ def job_status(job_id: str) -> JSONResponse:
         "usage": ctx.meter.summary(),
         "result": job.get("result"), "error": job.get("error"),
     })
+
+
+@app.get("/api/replay/{name}")
+def replay(name: str) -> JSONResponse:
+    """A saved web run (output/runs/*_web_<id>.json), shown read-only with ?replay=<id>. Used for screenshots."""
+    if not re.fullmatch(r"[A-Za-z0-9_-]{1,40}", name):
+        raise HTTPException(400, "Bad replay name.")
+    matches = sorted((config.OUTPUT_DIR / "runs").glob(f"*_web_{name}.json"))
+    if not matches:
+        raise HTTPException(404, "No saved run with that id.")
+    saved = json.loads(matches[-1].read_text(encoding="utf-8"))
+    trace = saved.pop("trace", [])
+    return JSONResponse({"status": "done", "trace": trace, "usage": saved["usage"],
+                         "elapsed_s": saved["elapsed_s"], "result": saved, "error": None})
 
 
 @app.get("/api/jobs/{job_id}/deck.pptx")

@@ -1,0 +1,129 @@
+{
+  "prices_per_1m": {
+    "input": 0.1,
+    "cached_input": 0.01,
+    "output": 0.5
+  },
+  "per_run": {
+    "input_tokens": {
+      "mean": 26526.1,
+      "median": 26905.5,
+      "p90": 29876,
+      "min": 21373,
+      "max": 35239
+    },
+    "cached_tokens": {
+      "mean": 14053.9,
+      "median": 14887.5,
+      "p90": 16855,
+      "min": 8943,
+      "max": 22183
+    },
+    "output_tokens": {
+      "mean": 5458.9,
+      "median": 5245.5,
+      "p90": 5897,
+      "min": 4463,
+      "max": 7968
+    },
+    "cost_usd": {
+      "mean": 0.0041173,
+      "median": 0.003979,
+      "p90": 0.004386,
+      "min": 0.003541,
+      "max": 0.005429
+    },
+    "elapsed_s": {
+      "mean": 47.54,
+      "median": 45.9,
+      "p90": 50.5,
+      "min": 37.8,
+      "max": 69.2
+    },
+    "model_calls": {
+      "mean": 6.7,
+      "median": 7.0,
+      "p90": 7,
+      "min": 6,
+      "max": 8
+    },
+    "tool_calls": {
+      "mean": 22.4,
+      "median": 22.0,
+      "p90": 23,
+      "min": 21,
+      "max": 24
+    }
+  },
+  "per_agent_mean": {
+    "analyst": {
+      "calls": 5.7,
+      "input": 19612.3,
+      "cached": 13015.9,
+      "output": 2038.4,
+      "cost": 0.0018091000000000001
+    },
+    "storyliner": {
+      "calls": 1,
+      "input": 6913.8,
+      "cached": 1038,
+      "output": 3420.5,
+      "cost": 0.002308
+    }
+  },
+  "fix_round_run_cost_mean": 0.00477,
+  "no_cache_cost_mean": 0.00538206,
+  "cache_share": 0.5298140322173256,
+  "users": {
+    "light": {
+      "runs_per_month": 5,
+      "per_user_month": 0.0205865,
+      "users_100": 2.05865,
+      "users_10000": 205.865
+    },
+    "typical": {
+      "runs_per_month": 20,
+      "per_user_month": 0.082346,
+      "users_100": 8.2346,
+      "users_10000": 823.46
+    },
+    "heavy": {
+      "runs_per_month": 60,
+      "per_user_month": 0.247038,
+      "users_100": 24.7038,
+      "users_10000": 2470.38
+    }
+  },
+  "hosting_usd_month": {
+    "100": 25,
+    "10000": 400
+  },
+  "runs_per_day_at_10k": 9523.809523809523,
+  "daily_cap_runs_at_default": 242.87761397032037,
+  "baseline": {
+    "input_tokens_mean": 2730,
+    "cost_mean": 0.0019764,
+    "tokens_per_row": 42.65625
+  },
+  "scale_with_rows": [
+    {
+      "rows_per_file": 32,
+      "single_prompt_input_tokens": 2730,
+      "single_prompt_cost": 0.0021728000000000003,
+      "pipeline_cost_note": "tool results are aggregates capped at 25 groups per call and 200 facts per run, so input is bounded (not measured on large files)"
+    },
+    {
+      "rows_per_file": 500,
+      "single_prompt_input_tokens": 42656,
+      "single_prompt_cost": 0.006165425,
+      "pipeline_cost_note": "tool results are aggregates capped at 25 groups per call and 200 facts per run, so input is bounded (not measured on large files)"
+    },
+    {
+      "rows_per_file": 5000,
+      "single_prompt_input_tokens": 426562,
+      "single_prompt_cost": 0.04455605,
+      "pipeline_cost_note": "tool results are aggregates capped at 25 groups per call and 200 facts per run, so input is bounded (not measured on large files)"
+    }
+  ],
+  "n_clean_runs": 10
+}

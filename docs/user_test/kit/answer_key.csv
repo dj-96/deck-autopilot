@@ -1,0 +1,115 @@
+id,what,value,display,how computed
+F1,"Total revenue_usd, 2026-09",1978619.0,$1.98M,sum(revenue_usd)
+F2,"Total revenue_usd, 2026-10",2042729.0,$2.04M,sum(revenue_usd)
+F3,"Change in Total revenue_usd, 2026-09 to 2026-10",64110.0,+$64K,sum(revenue_usd)
+F4,"Change in Total revenue_usd (%), 2026-09 to 2026-10",3.2401,+3.2%,sum(revenue_usd)
+F5,"Total orders, 2026-09",23291.0,"23,291",sum(orders)
+F6,"Total orders, 2026-10",25245.0,"25,245",sum(orders)
+F7,"Change in Total orders, 2026-09 to 2026-10",1954.0,"+1,954",sum(orders)
+F8,"Change in Total orders (%), 2026-09 to 2026-10",8.3895,+8.4%,sum(orders)
+F9,"Total units, 2026-09",35212.0,"35,212",sum(units)
+F10,"Total units, 2026-10",36574.0,"36,574",sum(units)
+F11,"Change in Total units, 2026-09 to 2026-10",1362.0,"+1,362",sum(units)
+F12,"Change in Total units (%), 2026-09 to 2026-10",3.868,+3.9%,sum(units)
+F13,"Total new_customers, 2026-09",7590.0,"7,590",sum(new_customers)
+F14,"Total new_customers, 2026-10",7939.0,"7,939",sum(new_customers)
+F15,"Change in Total new_customers, 2026-09 to 2026-10",349.0,+349,sum(new_customers)
+F16,"Change in Total new_customers (%), 2026-09 to 2026-10",4.5982,+4.6%,sum(new_customers)
+F17,"Total returns_usd, 2026-09",102590.0,$103K,sum(returns_usd)
+F18,"Total returns_usd, 2026-10",123274.0,$123K,sum(returns_usd)
+F19,"Change in Total returns_usd, 2026-09 to 2026-10",20684.0,+$21K,sum(returns_usd)
+F20,"Change in Total returns_usd (%), 2026-09 to 2026-10",20.1618,+20.2%,sum(returns_usd)
+F21,"Total marketing_usd, 2026-09",122479.0,$122K,sum(marketing_usd)
+F22,"Total marketing_usd, 2026-10",132643.0,$133K,sum(marketing_usd)
+F23,"Change in Total marketing_usd, 2026-09 to 2026-10",10164.0,+$10K,sum(marketing_usd)
+F24,"Change in Total marketing_usd (%), 2026-09 to 2026-10",8.2986,+8.3%,sum(marketing_usd)
+F25,"revenue_usd, Northeast, 2026-09",542314.0,$542K,sum(revenue_usd) where region=Northeast
+F26,"revenue_usd, Northeast, 2026-10",584239.0,$584K,sum(revenue_usd) where region=Northeast
+F27,"Change in revenue_usd, Northeast, 2026-09 to 2026-10",41925.0,+$42K,sum(revenue_usd) where region=Northeast
+F28,"Change in revenue_usd, Northeast (%), 2026-09 to 2026-10",7.7308,+7.7%,sum(revenue_usd) where region=Northeast
+F29,"revenue_usd, South, 2026-09",462421.0,$462K,sum(revenue_usd) where region=South
+F30,"revenue_usd, South, 2026-10",486627.0,$487K,sum(revenue_usd) where region=South
+F31,"Change in revenue_usd, South, 2026-09 to 2026-10",24206.0,+$24K,sum(revenue_usd) where region=South
+F32,"Change in revenue_usd, South (%), 2026-09 to 2026-10",5.2346,+5.2%,sum(revenue_usd) where region=South
+F33,"revenue_usd, West, 2026-09",566496.0,$566K,sum(revenue_usd) where region=West
+F34,"revenue_usd, West, 2026-10",548094.0,$548K,sum(revenue_usd) where region=West
+F35,"Change in revenue_usd, West, 2026-09 to 2026-10",-18402.0,-$18K,sum(revenue_usd) where region=West
+F36,"Change in revenue_usd, West (%), 2026-09 to 2026-10",-3.2484,-3.2%,sum(revenue_usd) where region=West
+F37,"revenue_usd, Midwest, 2026-09",407388.0,$407K,sum(revenue_usd) where region=Midwest
+F38,"revenue_usd, Midwest, 2026-10",423769.0,$424K,sum(revenue_usd) where region=Midwest
+F39,"Change in revenue_usd, Midwest, 2026-09 to 2026-10",16381.0,+$16K,sum(revenue_usd) where region=Midwest
+F40,"Change in revenue_usd, Midwest (%), 2026-09 to 2026-10",4.021,+4.0%,sum(revenue_usd) where region=Midwest
+F41,"revenue_usd, Apparel, 2026-09",747093.0,$747K,sum(revenue_usd) where category=Apparel
+F42,"revenue_usd, Apparel, 2026-10",776217.0,$776K,sum(revenue_usd) where category=Apparel
+F43,"Change in revenue_usd, Apparel, 2026-09 to 2026-10",29124.0,+$29K,sum(revenue_usd) where category=Apparel
+F44,"Change in revenue_usd, Apparel (%), 2026-09 to 2026-10",3.8983,+3.9%,sum(revenue_usd) where category=Apparel
+F45,"revenue_usd, Camping, 2026-09",448824.0,$449K,sum(revenue_usd) where category=Camping
+F46,"revenue_usd, Camping, 2026-10",471148.0,$471K,sum(revenue_usd) where category=Camping
+F47,"Change in revenue_usd, Camping, 2026-09 to 2026-10",22324.0,+$22K,sum(revenue_usd) where category=Camping
+F48,"Change in revenue_usd, Camping (%), 2026-09 to 2026-10",4.9739,+5.0%,sum(revenue_usd) where category=Camping
+F49,"revenue_usd, Accessories, 2026-09",222140.0,$222K,sum(revenue_usd) where category=Accessories
+F50,"revenue_usd, Accessories, 2026-10",231128.0,$231K,sum(revenue_usd) where category=Accessories
+F51,"Change in revenue_usd, Accessories, 2026-09 to 2026-10",8988.0,+$9K,sum(revenue_usd) where category=Accessories
+F52,"Change in revenue_usd, Accessories (%), 2026-09 to 2026-10",4.0461,+4.0%,sum(revenue_usd) where category=Accessories
+F53,"revenue_usd, Footwear, 2026-09",560562.0,$561K,sum(revenue_usd) where category=Footwear
+F54,"revenue_usd, Footwear, 2026-10",564236.0,$564K,sum(revenue_usd) where category=Footwear
+F55,"Change in revenue_usd, Footwear, 2026-09 to 2026-10",3674.0,+$4K,sum(revenue_usd) where category=Footwear
+F56,"Change in revenue_usd, Footwear (%), 2026-09 to 2026-10",0.6554,+0.7%,sum(revenue_usd) where category=Footwear
+F57,"revenue_usd, Online, 2026-09",835554.0,$836K,sum(revenue_usd) where channel=Online
+F58,"revenue_usd, Online, 2026-10",897972.0,$898K,sum(revenue_usd) where channel=Online
+F59,"Change in revenue_usd, Online, 2026-09 to 2026-10",62418.0,+$62K,sum(revenue_usd) where channel=Online
+F60,"Change in revenue_usd, Online (%), 2026-09 to 2026-10",7.4703,+7.5%,sum(revenue_usd) where channel=Online
+F61,"revenue_usd, Store, 2026-09",1143065.0,$1.14M,sum(revenue_usd) where channel=Store
+F62,"revenue_usd, Store, 2026-10",1144757.0,$1.14M,sum(revenue_usd) where channel=Store
+F63,"Change in revenue_usd, Store, 2026-09 to 2026-10",1692.0,+$2K,sum(revenue_usd) where channel=Store
+F64,"Change in revenue_usd, Store (%), 2026-09 to 2026-10",0.148,+0.1%,sum(revenue_usd) where channel=Store
+F65,"revenue_usd, West, Store, 2026-09",330302.0,$330K,sum(revenue_usd) where region=West and channel=Store
+F66,"revenue_usd, West, Store, 2026-10",294641.0,$295K,sum(revenue_usd) where region=West and channel=Store
+F67,"Change in revenue_usd, West, Store, 2026-09 to 2026-10",-35661.0,-$36K,sum(revenue_usd) where region=West and channel=Store
+F68,"Change in revenue_usd, West, Store (%), 2026-09 to 2026-10",-10.7965,-10.8%,sum(revenue_usd) where region=West and channel=Store
+F69,"revenue_usd, Northeast, Online, 2026-09",229336.0,$229K,sum(revenue_usd) where region=Northeast and channel=Online
+F70,"revenue_usd, Northeast, Online, 2026-10",256057.0,$256K,sum(revenue_usd) where region=Northeast and channel=Online
+F71,"Change in revenue_usd, Northeast, Online, 2026-09 to 2026-10",26721.0,+$27K,sum(revenue_usd) where region=Northeast and channel=Online
+F72,"Change in revenue_usd, Northeast, Online (%), 2026-09 to 2026-10",11.6515,+11.7%,sum(revenue_usd) where region=Northeast and channel=Online
+F73,"revenue_usd, West, Online, 2026-09",236194.0,$236K,sum(revenue_usd) where region=West and channel=Online
+F74,"revenue_usd, West, Online, 2026-10",253453.0,$253K,sum(revenue_usd) where region=West and channel=Online
+F75,"Change in revenue_usd, West, Online, 2026-09 to 2026-10",17259.0,+$17K,sum(revenue_usd) where region=West and channel=Online
+F76,"Change in revenue_usd, West, Online (%), 2026-09 to 2026-10",7.3071,+7.3%,sum(revenue_usd) where region=West and channel=Online
+F77,"revenue_usd, Northeast, Store, 2026-09",312978.0,$313K,sum(revenue_usd) where region=Northeast and channel=Store
+F78,"revenue_usd, Northeast, Store, 2026-10",328182.0,$328K,sum(revenue_usd) where region=Northeast and channel=Store
+F79,"Change in revenue_usd, Northeast, Store, 2026-09 to 2026-10",15204.0,+$15K,sum(revenue_usd) where region=Northeast and channel=Store
+F80,"Change in revenue_usd, Northeast, Store (%), 2026-09 to 2026-10",4.8578,+4.9%,sum(revenue_usd) where region=Northeast and channel=Store
+F81,"revenue_usd, South, Store, 2026-09",262577.0,$263K,sum(revenue_usd) where region=South and channel=Store
+F82,"revenue_usd, South, Store, 2026-10",275070.0,$275K,sum(revenue_usd) where region=South and channel=Store
+F83,"Change in revenue_usd, South, Store, 2026-09 to 2026-10",12493.0,+$12K,sum(revenue_usd) where region=South and channel=Store
+F84,"Change in revenue_usd, South, Store (%), 2026-09 to 2026-10",4.7578,+4.8%,sum(revenue_usd) where region=South and channel=Store
+F85,"revenue_usd, South, Online, 2026-09",199844.0,$200K,sum(revenue_usd) where region=South and channel=Online
+F86,"revenue_usd, South, Online, 2026-10",211557.0,$212K,sum(revenue_usd) where region=South and channel=Online
+F87,"Change in revenue_usd, South, Online, 2026-09 to 2026-10",11713.0,+$12K,sum(revenue_usd) where region=South and channel=Online
+F88,"Change in revenue_usd, South, Online (%), 2026-09 to 2026-10",5.8611,+5.9%,sum(revenue_usd) where region=South and channel=Online
+F89,"revenue_usd, Midwest, Store, 2026-09",237208.0,$237K,sum(revenue_usd) where region=Midwest and channel=Store
+F90,"revenue_usd, Midwest, Store, 2026-10",246864.0,$247K,sum(revenue_usd) where region=Midwest and channel=Store
+F91,"Change in revenue_usd, Midwest, Store, 2026-09 to 2026-10",9656.0,+$10K,sum(revenue_usd) where region=Midwest and channel=Store
+F92,"Change in revenue_usd, Midwest, Store (%), 2026-09 to 2026-10",4.0707,+4.1%,sum(revenue_usd) where region=Midwest and channel=Store
+F93,"revenue_usd, Midwest, Online, 2026-09",170180.0,$170K,sum(revenue_usd) where region=Midwest and channel=Online
+F94,"revenue_usd, Midwest, Online, 2026-10",176905.0,$177K,sum(revenue_usd) where region=Midwest and channel=Online
+F95,"Change in revenue_usd, Midwest, Online, 2026-09 to 2026-10",6725.0,+$7K,sum(revenue_usd) where region=Midwest and channel=Online
+F96,"Change in revenue_usd, Midwest, Online (%), 2026-09 to 2026-10",3.9517,+4.0%,sum(revenue_usd) where region=Midwest and channel=Online
+F97,"Return rate (total), 2026-09",5.1849,5.2%,sum(returns_usd) / sum(revenue_usd)
+F98,"Return rate (total), 2026-10",6.0348,6.0%,sum(returns_usd) / sum(revenue_usd)
+F99,"Change in Return rate (total), 2026-09 to 2026-10",0.8498,+0.8 pp,sum(returns_usd) / sum(revenue_usd)
+F100,"Gross margin (total), 2026-09",47.4188,47.4%,sum(gross_profit_usd) / sum(revenue_usd)
+F101,"Gross margin (total), 2026-10",47.6507,47.7%,sum(gross_profit_usd) / sum(revenue_usd)
+F102,"Change in Gross margin (total), 2026-09 to 2026-10",0.2319,+0.2 pp,sum(gross_profit_usd) / sum(revenue_usd)
+F103,"Return rate, Accessories, 2026-09",5.8436,5.8%,sum(returns_usd) / sum(revenue_usd) where category=Accessories
+F104,"Return rate, Accessories, 2026-10",6.0261,6.0%,sum(returns_usd) / sum(revenue_usd) where category=Accessories
+F105,"Change in Return rate, Accessories, 2026-09 to 2026-10",0.1825,+0.2 pp,sum(returns_usd) / sum(revenue_usd) where category=Accessories
+F106,"Return rate, Apparel, 2026-09",5.3321,5.3%,sum(returns_usd) / sum(revenue_usd) where category=Apparel
+F107,"Return rate, Apparel, 2026-10",5.0506,5.1%,sum(returns_usd) / sum(revenue_usd) where category=Apparel
+F108,"Change in Return rate, Apparel, 2026-09 to 2026-10",-0.2815,-0.3 pp,sum(returns_usd) / sum(revenue_usd) where category=Apparel
+F109,"Return rate, Camping, 2026-09",4.8197,4.8%,sum(returns_usd) / sum(revenue_usd) where category=Camping
+F110,"Return rate, Camping, 2026-10",4.6187,4.6%,sum(returns_usd) / sum(revenue_usd) where category=Camping
+F111,"Change in Return rate, Camping, 2026-09 to 2026-10",-0.201,-0.2 pp,sum(returns_usd) / sum(revenue_usd) where category=Camping
+F112,"Return rate, Footwear, 2026-09",5.0201,5.0%,sum(returns_usd) / sum(revenue_usd) where category=Footwear
+F113,"Return rate, Footwear, 2026-10",8.5746,8.6%,sum(returns_usd) / sum(revenue_usd) where category=Footwear
+F114,"Change in Return rate, Footwear, 2026-09 to 2026-10",3.5545,+3.6 pp,sum(returns_usd) / sum(revenue_usd) where category=Footwear
