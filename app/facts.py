@@ -7,7 +7,7 @@ into something the data doesn't say.
 from dataclasses import asdict, dataclass
 
 UNITS = ("usd", "count", "pct", "pp")  # pct = percent value (7.7 means 7.7%); pp = percentage points
-MAX_FACTS = 200
+MAX_FACTS = 400  # raised from 200: at 200 the Analyst ran out in 9/10 runs and missed stories (docs/evidence)
 
 
 @dataclass

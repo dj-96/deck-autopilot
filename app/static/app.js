@@ -120,6 +120,12 @@ async function pollJob() {
 
 // ---------- agent steps (derived from the live trace) ----------
 function updateSteps(job) {
+  stepStates(job);
+  const active = document.querySelector("#steps li.active b");
+  $("running-detail").textContent = active ? `${active.textContent} working…` : "Finishing…";
+}
+
+function stepStates(job) {
   const t = job.trace, by = (a, k) => t.filter((e) => e.agent === a && (!k || e.kind === k));
   const li = (s) => document.querySelector(`#steps li[data-step="${s}"]`);
   const set = (s, cls, text) => { li(s).className = cls; if (text !== undefined) li(s).querySelector("em").textContent = text; };
@@ -154,8 +160,6 @@ function updateSteps(job) {
   if (rDone) set("renderer", "done", rDone.detail.replace("Built ", ""));
   else if (checks.length && !fixing) set("renderer", failed ? "failed" : "active", "Building .pptx…");
 
-  const active = document.querySelector("#steps li.active b");
-  $("running-detail").textContent = active ? active.textContent : "Finishing…";
 }
 
 function updateMeter(u, elapsed) {
@@ -365,8 +369,20 @@ async function replayFromURL() {
   const res = await fetch(`/api/replay/${encodeURIComponent(id)}`);
   if (!res.ok) { $("error-box").hidden = false; $("error-box").textContent = "Saved run not found."; return; }
   const job = await res.json();
-  state.result = job.result;
   $("empty").hidden = true;
+  if (q.get("upto")) {  // show the run as it looked mid-way: first N trace events, no result yet
+    const partial = { ...job, status: "running", result: null, trace: job.trace.slice(0, +q.get("upto")) };
+    $("running").hidden = false;
+    updateSteps(partial);
+    const calls = partial.trace.filter((e) => e.kind === "model_call" && e.tokens);
+    const u = calls.reduce((a, e) => ({ input_tokens: a.input_tokens + e.tokens.input, cached_tokens: a.cached_tokens + e.tokens.cached,
+      output_tokens: a.output_tokens + e.tokens.output, calls: a.calls + 1 }), { input_tokens: 0, cached_tokens: 0, output_tokens: 0, calls: 0 });
+    u.cost_usd = ((u.input_tokens - u.cached_tokens) * 0.10 + u.cached_tokens * 0.01 + u.output_tokens * 0.50) / 1e6;
+    updateMeter(u, partial.trace.length ? partial.trace[partial.trace.length - 1].t - job.trace[0].t : 0);
+    $("run").disabled = true; $("run").textContent = "Building…";
+    return;
+  }
+  state.result = job.result;
   updateSteps(job); updateMeter(job.usage, job.elapsed_s);
   renderResult(job.result); renderSafety(job.result);
   $("download").removeAttribute("href");

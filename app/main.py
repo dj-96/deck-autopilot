@@ -50,7 +50,7 @@ def _payload(r, ctx: RunContext) -> dict:
         "periods": {"previous": r.data.prev_label, "current": r.data.curr_label},
         "deck": r.deck.model_dump(),
         "charts": chart_values(r.deck, facts),
-        "facts": {f.id: {"display": f.display, "label": f.label, "unit": f.unit, "source": f.source}
+        "facts": {f.id: {"display": f.display, "label": f.label, "unit": f.unit, "source": f.source, "value": f.value}
                   for f in facts.facts.values()},
         "findings": r.analyst.findings,
         "check": r.check.to_dict(),

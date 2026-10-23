@@ -16,7 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.stdout.reconfigure(encoding="utf-8")
 
-from app import config  # noqa: E402
+from app import config, facts as facts_mod  # noqa: E402
 from app.pipeline import run_pipeline  # noqa: E402
 
 EVIDENCE = config.REPO_DIR / "docs" / "evidence"
@@ -82,12 +82,15 @@ def main() -> None:
     ap.add_argument("--poisoned", type=int, default=3)
     ap.add_argument("--tamper", type=int, default=3)
     ap.add_argument("--workers", type=int, default=3)
+    ap.add_argument("--max-facts", type=int, default=facts_mod.MAX_FACTS, help="fact-table cap (cost lever)")
+    ap.add_argument("--out", default="batch_runs.json")
     args = ap.parse_args()
+    facts_mod.MAX_FACTS = args.max_facts
     plan = ([("clean", i) for i in range(args.clean)] + [("poisoned", i) for i in range(args.poisoned)]
             + [("tamper", i) for i in range(args.tamper)])
 
     EVIDENCE.mkdir(parents=True, exist_ok=True)
-    out = EVIDENCE / "batch_runs.json"
+    out = EVIDENCE / args.out
     runs, failures = [], []
     started = time.time()
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
@@ -103,7 +106,7 @@ def main() -> None:
             except Exception as err:  # noqa: BLE001 - record and keep going
                 failures.append({"kind": k, "i": i, "error": f"{type(err).__name__}: {err}"})
                 print(f"  {k:<8} #{i}: FAILED {type(err).__name__}: {err}", flush=True)
-            out.write_text(json.dumps({"runs": runs, "failures": failures}, indent=2), encoding="utf-8")
+            out.write_text(json.dumps({"max_facts": args.max_facts, "runs": runs, "failures": failures}, indent=2), encoding="utf-8")
 
     print(f"\n{len(runs)} runs ok, {len(failures)} failed, {time.time() - started:.0f}s wall clock -> "
           f"{out.relative_to(config.REPO_DIR)}")

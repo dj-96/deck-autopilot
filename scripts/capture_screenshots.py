@@ -62,6 +62,7 @@ def main() -> None:
     b, c, d = args.base, args.clean, args.demo
     plan = {
         "01_start_screen": (f"{b}/", "1440,900"),
+        "01b_agents_running": (f"{b}/?replay={c}&upto=14", "1440,900"),
         "02_result_summary": (f"{b}/?replay={c}&slide=1", "1440,1000"),
         "03_result_chart_slide": (f"{b}/?replay={c}&slide=3", "1440,1000"),
         "04_fact_trace": (f"{b}/?replay={c}&slide=1&open=facts&bullet=0", "1440,1250"),
