@@ -105,11 +105,11 @@ def tokens_per_call_chart(calls: list[dict]) -> str:
 
 
 def pipeline_diagram() -> str:
-    boxes = [("Guard", "code", "size caps · injection scan"), ("Analyst agent", "llm", "7 Python tools → fact table"),
-             ("Storyliner agent", "llm", "action titles cite fact IDs"), ("Fact-checker", "code", "every number vs facts"),
-             ("Renderer", "code", "web preview · .pptx")]
-    W, bw, gap, y0, h = 680, 116, 15, 52, 66
-    x0 = (W - (len(boxes) * bw + (len(boxes) - 1) * gap)) / 2
+    boxes = [("Guard", "code", "caps · injection scan"), ("Analyst agent", "llm", "tools → facts"),
+             ("Storyliner agent", "llm", "titles cite facts"), ("Fact-checker", "code", "numbers vs facts"),
+             ("Renderer", "code", "preview · .pptx")]
+    W, bw, gap, y0, h = 680, 110, 14, 52, 66
+    x0 = W - 12 - (len(boxes) * bw + (len(boxes) - 1) * gap)  # room on the left for the "2 files" label
     p = [f'<svg viewBox="0 0 {W} 210" role="img" aria-label="Agent pipeline diagram">',
          '<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">'
          '<path d="M2 1L8 5L2 9" fill="none" stroke="#52525B" stroke-width="1.6"/></marker></defs>',
@@ -119,7 +119,7 @@ def pipeline_diagram() -> str:
         x = x0 + i * (bw + gap)
         fill, stroke, tc = ("#FCE7F3", PINK, "#831843") if kind == "llm" else ("#F4F4F5", "#A1A1AA", INK)
         p.append(f'<rect x="{x:.0f}" y="{y0}" width="{bw}" height="{h}" rx="8" fill="{fill}" stroke="{stroke}" stroke-width="1.2"/>')
-        p.append(f'<text x="{x + bw / 2:.0f}" y="{y0 + 27}" text-anchor="middle" font-size="12.5" font-weight="700" fill="{tc}">{e(name)}</text>')
+        p.append(f'<text x="{x + bw / 2:.0f}" y="{y0 + 27}" text-anchor="middle" font-size="12" font-weight="700" fill="{tc}">{e(name)}</text>')
         p.append(f'<text x="{x + bw / 2:.0f}" y="{y0 + 46}" text-anchor="middle" font-size="10" fill="{MUTED}">{e(sub)}</text>')
         centers.append(x + bw / 2)
         if i:
@@ -128,7 +128,7 @@ def pipeline_diagram() -> str:
     a, b = centers[3], centers[2]
     p.append(f'<path d="M{a:.0f},{y0 + h} V{y0 + h + 30} H{b:.0f} V{y0 + h + 4}" fill="none" stroke="{PINK}" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#ar)"/>')
     p.append(f'<text x="{(a + b) / 2:.0f}" y="{y0 + h + 46}" text-anchor="middle" font-size="11" fill="{PINK}">rejected numbers sent back (max 2 fixes)</text>')
-    p.append(f'<text x="{centers[1]:.0f}" y="{y0 - 12}" text-anchor="middle" font-size="11" fill="{MUTED}">tools: get_schema · compare_total · compare_by · compare_ratio · define_metric · read_notes · submit_findings</text>')
+    p.append(f'<text x="{W / 2:.0f}" y="{y0 - 14}" text-anchor="middle" font-size="10.5" fill="{MUTED}">Analyst tools: get_schema · compare_total · compare_by · compare_ratio · define_metric · read_notes · submit_findings</text>')
     lx = 150
     p.append(f'<rect x="{lx}" y="186" width="12" height="12" rx="2" fill="#FCE7F3" stroke="{PINK}"/><text x="{lx + 18}" y="196" font-size="11" fill="{INK}">LLM agent (gpt-6-luna)</text>')
     p.append(f'<rect x="{lx + 190}" y="186" width="12" height="12" rx="2" fill="#F4F4F5" stroke="#A1A1AA"/><text x="{lx + 208}" y="196" font-size="11" fill="{INK}">Plain Python (deterministic)</text>')

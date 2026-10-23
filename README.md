@@ -4,6 +4,8 @@
 
 Upload last period's and this period's business data, and get back a refreshed consulting deck: action titles, charts, and a "what changed" list. Every number on every slide is checked against the data before you see it. Download it as an editable PowerPoint.
 
+**Project write-up:** [report.html](report.html) (10–15 page report) · [slides.html](slides.html) (10-slide deck; arrow keys, F for full screen). Download and open either file in a browser.
+
 ## Run it locally (about 3 minutes)
 
 You need Python 3.11+ and one API key.
