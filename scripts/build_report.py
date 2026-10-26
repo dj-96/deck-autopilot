@@ -22,6 +22,11 @@ R = config.REPO_DIR
 EV = R / "docs" / "evidence"
 SHOTS = R / "docs" / "screenshots"
 REPO_URL = "https://github.com/dj-96/deck-autopilot"
+REPO_BOX = (f'<div class="repo"><b>Code: public GitHub repo (no access request needed)</b><br>'
+            f'<a href="{REPO_URL}">{REPO_URL}</a><br>'
+            f'<code>git clone {REPO_URL}.git</code><br>'
+            '<span>Then follow the README (about 3 minutes). Needs <code>PORTKEY_API_KEY</code> or '
+            '<code>OPENAI_API_KEY</code> in a <code>.env</code> in the repo folder or the folder above it.</span></div>')
 PINK, BLUE, INK, MUTED = "#E0287F", "#2B6CB0", "#18181B", "#6B6B75"  # pair validated with dataviz validator
 
 # Impact assumptions (estimates, labeled as such in the report).
@@ -270,6 +275,9 @@ def main() -> None:
     .sub {{ color: {MUTED}; font-size: 12pt; margin: 4px 0 10px; }}
     .meta {{ font-size: 10pt; color: {MUTED}; }}
     .meta b {{ color: {INK}; }}
+    .repo {{ border: 2px solid {PINK}; border-radius: 8px; padding: 8px 12px; margin: 10px 0; font-size: 10.5pt; line-height: 1.6; break-inside: avoid; }}
+    .repo a {{ font-size: 12pt; font-weight: 700; }}
+    .repo span {{ font-size: 9pt; color: {MUTED}; }}
     .oneliner {{ font-size: 12pt; border-left: 4px solid {PINK}; padding: 6px 12px; background: #FDF2F8; margin: 12px 0; }}
     .kpis {{ display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 12px 0 4px; }}
     .kpi {{ border: 1px solid #E4E4E7; border-radius: 8px; padding: 8px 10px; }}
@@ -303,6 +311,7 @@ def main() -> None:
   <div class="meta"><b>Jun Kim</b> · Yale SOM · MGT 409 AI Foundations for Managers · Final project, October 2026<br>
   <b>Repo:</b> <a href="{REPO_URL}">{REPO_URL}</a> · <b>App:</b> runs locally from the repo in about 3 minutes (README, step by step); no hosted link</div>
   <div class="oneliner">Upload last period's and this period's data; two AI agents find what changed and write the slides, plain Python checks every number against the data, and you download an editable PowerPoint.</div>
+  {REPO_BOX}
   <div class="kpis">{kpi_html}</div>
   <p class="note">All figures in this report come from real runs of the app on 22 October 2026 (16-run batch unless stated), saved in the repo under <code>docs/evidence/</code> with the scripts that produced them.</p>
 </header>
@@ -421,6 +430,8 @@ def main() -> None:
   <li><b>Pilot with my former team:</b> run the user-test kit with two consultants, measure before/after time and errors, and iterate.</li>
   <li><b>Multi-period trends and data connectors</b> (Excel workbooks, BI exports), plus hosting with per-user budgets and an enterprise model endpoint for client data.</li>
 </ol>
+<h3>Run it yourself</h3>
+{REPO_BOX}
 """
     out = R / "report.html"
     out.write_text(f"""<!doctype html><html lang="en"><head><meta charset="utf-8">

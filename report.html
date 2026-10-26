@@ -13,6 +13,9 @@
     .sub { color: #6B6B75; font-size: 12pt; margin: 4px 0 10px; }
     .meta { font-size: 10pt; color: #6B6B75; }
     .meta b { color: #18181B; }
+    .repo { border: 2px solid #E0287F; border-radius: 8px; padding: 8px 12px; margin: 10px 0; font-size: 10.5pt; line-height: 1.6; break-inside: avoid; }
+    .repo a { font-size: 12pt; font-weight: 700; }
+    .repo span { font-size: 9pt; color: #6B6B75; }
     .oneliner { font-size: 12pt; border-left: 4px solid #E0287F; padding: 6px 12px; background: #FDF2F8; margin: 12px 0; }
     .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 12px 0 4px; }
     .kpi { border: 1px solid #E4E4E7; border-radius: 8px; padding: 8px 10px; }
@@ -44,6 +47,7 @@
   <div class="meta"><b>Jun Kim</b> · Yale SOM · MGT 409 AI Foundations for Managers · Final project, October 2026<br>
   <b>Repo:</b> <a href="https://github.com/dj-96/deck-autopilot">https://github.com/dj-96/deck-autopilot</a> · <b>App:</b> runs locally from the repo in about 3 minutes (README, step by step); no hosted link</div>
   <div class="oneliner">Upload last period's and this period's data; two AI agents find what changed and write the slides, plain Python checks every number against the data, and you download an editable PowerPoint.</div>
+  <div class="repo"><b>Code: public GitHub repo (no access request needed)</b><br><a href="https://github.com/dj-96/deck-autopilot">https://github.com/dj-96/deck-autopilot</a><br><code>git clone https://github.com/dj-96/deck-autopilot.git</code><br><span>Then follow the README (about 3 minutes). Needs <code>PORTKEY_API_KEY</code> or <code>OPENAI_API_KEY</code> in a <code>.env</code> in the repo folder or the folder above it.</span></div>
   <div class="kpis"><div class="kpi"><b>$0.0041</b><span>mean cost per deck</span></div><div class="kpi"><b>48 s</b><span>mean time to a finished deck</span></div><div class="kpi"><b>0 / 16</b><span>runs that shipped an unverified number</span></div><div class="kpi"><b>3/3</b><span>hidden prompt injections blocked</span></div><div class="kpi"><b>3/3</b><span>planted fake numbers caught</span></div></div>
   <p class="note">All figures in this report come from real runs of the app on 22 October 2026 (16-run batch unless stated), saved in the repo under <code>docs/evidence/</code> with the scripts that produced them.</p>
 </header>
@@ -137,4 +141,6 @@
   <li><b>Pilot with my former team:</b> run the user-test kit with two consultants, measure before/after time and errors, and iterate.</li>
   <li><b>Multi-period trends and data connectors</b> (Excel workbooks, BI exports), plus hosting with per-user budgets and an enterprise model endpoint for client data.</li>
 </ol>
+<h3>Run it yourself</h3>
+<div class="repo"><b>Code: public GitHub repo (no access request needed)</b><br><a href="https://github.com/dj-96/deck-autopilot">https://github.com/dj-96/deck-autopilot</a><br><code>git clone https://github.com/dj-96/deck-autopilot.git</code><br><span>Then follow the README (about 3 minutes). Needs <code>PORTKEY_API_KEY</code> or <code>OPENAI_API_KEY</code> in a <code>.env</code> in the repo folder or the folder above it.</span></div>
 </body></html>

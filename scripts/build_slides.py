@@ -47,7 +47,9 @@ def main() -> None:
   <h1><span class="pink">Deck</span> Autopilot</h1>
   <p class="pitch">Last month's client deck, refreshed in a minute,<br>with every number proven against the data.</p>
   <p class="byline">Jun Kim · Yale SOM · MGT 409 Final Project · October 2026</p>
-  <p class="small muted">{REPO_URL}</p>
+  <div class="repo"><span class="tag">Public GitHub repo · clone to run</span>
+    <a href="{REPO_URL}">{REPO_URL}</a>
+    <code>git clone {REPO_URL}.git</code></div>
 </section>""")
 
     # 2 Problem
@@ -181,7 +183,7 @@ def main() -> None:
 </section>""")
 
     # 10 Next
-    slides.append("""
+    slides.append(f"""
 <section>
   <h2>What's next</h2>
   <div class="cols">
@@ -204,7 +206,8 @@ def main() -> None:
       </ol>
     </div>
   </div>
-  <p class="closing"><span class="pink">AI decides what matters. Code proves every number.</span></p>
+  <p class="closing"><span class="pink">AI decides what matters. Code proves every number.</span>
+    <span class="repo-foot">Code (public): <a href="{REPO_URL}">{REPO_URL}</a> · <code>git clone {REPO_URL}.git</code></span></p>
 </section>""")
 
     assert len(slides) <= 10
@@ -255,6 +258,12 @@ table.cmp td.y { color: #4ade80; } table.cmp td.n { color: #71717a; } table.cmp 
 table.cmp tr.me td { background: rgba(255,46,147,.12); border-bottom: 2px solid #ff2e93; }
 table.cmp tr.me td:first-child { color: #ff2e93; }
 .closing { position: absolute; bottom: 30px; left: 0; font-size: 1.15em; font-weight: 800; }
+.repo-foot { display: block; font-size: .5em; font-weight: 400; color: #a1a1aa; margin-top: 10px; }
+.repo-foot a { color: #fff; }
+.repo { display: inline-flex; flex-direction: column; gap: 6px; margin-top: 24px; padding: 14px 20px; border: 2px solid #ff2e93; border-radius: 12px; }
+.repo .tag { font-size: .5em; color: #a1a1aa; text-transform: uppercase; letter-spacing: .08em; }
+.repo a { font-size: .8em; font-weight: 700; color: #fff; text-decoration: none; }
+.reveal code { font-family: Consolas, ui-monospace, monospace; font-size: .55em; color: #ff5aab; background: #141418; padding: 2px 8px; border-radius: 6px; }
 .reveal .progress { color: #ff2e93; }
 .reveal .slide-number { background: transparent; color: #71717a; font-size: 14px; }
 .reveal .controls { color: #ff2e93; }
